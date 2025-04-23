@@ -140,7 +140,7 @@ document.querySelectorAll('button, a, input, div').forEach(el => {
   el.style.borderStyle = 'solid';
 });
 
-// === Brainrot video (pilnas z-index ir matomumas) ===
+// === Brainrot video ===
 function randomVideo() {
   const vids = window.brainrotVideos || [];
   return vids.length ? vids[Math.floor(Math.random() * vids.length)] : '';
@@ -169,7 +169,7 @@ setTimeout(() => {
   });
 }, 3000);
 
-// === Lėtas išnykimas + countdown + reload (2 min) ===
+// === Galutinis išnykimas + countdown + reload ===
 setTimeout(() => {
   document.body.querySelectorAll('*').forEach(el => {
     if (el !== document.body && el !== document.documentElement) {
@@ -205,5 +205,5 @@ setTimeout(() => {
         countdownEl.innerText = count;
       }
     }, 1000);
-  }, 122000); // po 2 min
-}, 15000); // paleidžia po 15s
+  }, 122000); // 2 minutes fade + 2s pause
+}, 15000); // start after 15s
